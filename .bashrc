@@ -75,7 +75,7 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 # -----------------------------------------------------
 # DEVELOPMENT
 # -----------------------------------------------------
-alias dotsync="~/dotfiles-versions/dotfiles/.dev/sync.sh dotfiles"
+#alias dotsync="~/dotfiles-versions/dotfiles/.dev/sync.sh dotfiles"
 
 # -----------------------------------------------------
 # START STARSHIP
