@@ -1,20 +1,10 @@
-#    _               _              
-#   | |__   __ _ ___| |__  _ __ ___ 
-#   | '_ \ / _` / __| '_ \| '__/ __|
-#  _| |_) | (_| \__ \ | | | | | (__ 
-# (_)_.__/ \__,_|___/_| |_|_|  \___|
-# 
-# by Stephan Raabe (2023)
-# -----------------------------------------------------
-# ~/.bashrc
-# -----------------------------------------------------
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 PS1='[\u@\h \W]\$ '
 
 # Define Editor
-export EDITOR=nvim
+#export EDITOR=nvim
 
 # -----------------------------------------------------
 # ALIASES
@@ -38,25 +28,7 @@ alias winclass="xprop | grep 'CLASS'"
 alias dot="cd ~/dotfiles"
 alias cleanup='~/dotfiles/scripts/cleanup.sh'
 
-# -----------------------------------------------------
-# ML4W Apps
-# -----------------------------------------------------
-alias ml4w='~/dotfiles/apps/ML4W_Welcome-x86_64.AppImage'
-alias ml4w-settings='~/dotfiles/apps/ML4W_Dotfiles_Settings-x86_64.AppImage'
-alias ml4w-sidebar='~/dotfiles/eww/ml4w-sidebar/launch.sh'
-alias ml4w-hyprland='~/dotfiles/apps/ML4W_Hyprland_Settings-x86_64.AppImage'
-alias ml4w-diagnosis='~/dotfiles/hypr/scripts/diagnosis.sh'
-alias ml4w-hyprland-diagnosis='~/dotfiles/hypr/scripts/diagnosis.sh'
-alias ml4w-qtile-diagnosis='~/dotfiles/qtile/scripts/diagnosis.sh'
 
-# -----------------------------------------------------
-# Window Managers
-# -----------------------------------------------------
-
-alias Qtile='startx'
-# Hyprland with Hyprland
-
-# -----------------------------------------------------
 # GIT
 # -----------------------------------------------------
 alias gs="git status"
@@ -77,11 +49,6 @@ alias ChatGPT='python ~/mychatgpt/mychatgpt.py'
 alias chat='python ~/mychatgpt/mychatgpt.py'
 alias ascii='~/dotfiles/scripts/figlet.sh'
 
-# -----------------------------------------------------
-# VIRTUAL MACHINE
-# -----------------------------------------------------
-alias vm='~/private/launchvm.sh'
-alias lg='~/dotfiles/scripts/looking-glass.sh'
 
 # -----------------------------------------------------
 # EDIT CONFIG FILES
@@ -99,17 +66,11 @@ alias notes='$EDITOR ~/notes.txt'
 # SYSTEM
 # -----------------------------------------------------
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias setkb='setxkbmap de;echo "Keyboard set back to de."'
 
 # -----------------------------------------------------
 # SCREEN RESOLUTINS
 # -----------------------------------------------------
 
-# Qtile
-alias res1='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 120'
-alias res2='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120'
-
-export PATH="/usr/lib/ccache/bin/:$PATH"
 
 # -----------------------------------------------------
 # DEVELOPMENT
@@ -129,14 +90,14 @@ cat ~/.cache/wal/sequences
 # -----------------------------------------------------
 # Fastfetch if on wm
 # -----------------------------------------------------
-if [[ $(tty) == *"pts"* ]]; then
-    fastfetch --config examples/13
-else
-    echo
-    if [ -f /bin/qtile ]; then
-        echo "Start Qtile X11 with command Qtile"
-    fi
-    if [ -f /bin/hyprctl ]; then
-        echo "Start Hyprland with command Hyprland"
-    fi
-fi
+# if [[ $(tty) == *"pts"* ]]; then
+#     fastfetch --config examples/13
+# else
+#     echo
+#     if [ -f /bin/qtile ]; then
+#         echo "Start Qtile X11 with command Qtile"
+#     fi
+#     if [ -f /bin/hyprctl ]; then
+#         echo "Start Hyprland with command Hyprland"
+#     fi
+# fi
